@@ -1,0 +1,30 @@
+# Local environment configuration
+.env
+.env.local
+
+# Compiled binaries and builds
+server
+server.exe
+dist/
+build/
+bin/
+
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+
+# Frontend build directory
+frontend/dist
+frontend/node_modules
+
+# Temp files
+*.log
+node-v20.11.0-linux-x64/
+node-v20.11.0-linux-x64.tar.xz

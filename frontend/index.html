@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/blog.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Chronicle - Premium Personal Blog</title>
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      // Avoid flash of unstyled content for local storage theme override
+      {
+        const colorScheme = localStorage.getItem("color-scheme");
+        if (colorScheme) {
+          document.querySelector('meta[name="color-scheme"]').content = colorScheme;
+          if (colorScheme === 'light') {
+            document.documentElement.classList.add('light-theme');
+          } else {
+            document.documentElement.classList.remove('light-theme');
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
